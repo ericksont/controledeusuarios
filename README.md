@@ -1,2 +1,3 @@
-# controledeusuarios
-Sistema para gestçao de usuários por projeto em PHP e PostgreSQL
+# Controle de Usuários
+
+Sistema para gestão de usuários por projeto, em PHP e PostgreSQL
