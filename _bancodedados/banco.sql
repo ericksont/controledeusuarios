@@ -1,8 +1,8 @@
 CREATE TABLE users
 (
   id bigserial NOT NULL,
-  pass character varying NOT NULL,
   "user" character varying NOT NULL,
+  pass character varying NOT NULL,
   CONSTRAINT users_pkey PRIMARY KEY (id),
   CONSTRAINT users_user_key UNIQUE ("user")
 );
