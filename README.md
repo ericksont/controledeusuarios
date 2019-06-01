@@ -18,5 +18,6 @@ Senha: admin
 # Tecnologias
 
 Php 7
+Apache
 PostgreSQL 
 Workbench
