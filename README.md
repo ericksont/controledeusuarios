@@ -12,12 +12,15 @@ Sistema para gestão de usuários por projeto, em PHP e PostgreSQL.
 2. Importar o arquivo "banco.sql".
 3. Importar o arquivo "dados.sql".
 
-Usuário: admin
+Usuário: admin  
 Senha: admin
 
 # Tecnologias
 
-Php 7
-Apache
-PostgreSQL 
-Workbench
+Php 7.3  
+Apache 2.4  
+PostgreSQL 10.8  
+Workbench  
+  
+Template Gentelella   
+https://github.com/ColorlibHQ/gentelella
