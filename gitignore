@@ -1,6 +1,0 @@
-# adicionar 0 "." antes do nome do arquivo
-
-# Para todos os arquivos e sub-pastas localizados na pasta vendor/
-vendor/
-# Para arquivos Java compilados
-*.class

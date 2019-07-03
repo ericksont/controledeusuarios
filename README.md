@@ -4,7 +4,8 @@ Sistema para gestão de usuários por projeto, em PHP e PostgreSQL.
 
 # Objetivo
 
-
+Aplicação desenvolvida inicialmente com a intenção de estudar a melhor maneira de gerenciar multiplos projetos dentro de uma unica aplicação.  
+Os testes gerados são apenas para validação, caso o projeto sofra modificações futuras.
 
 # Como instalar
 

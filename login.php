@@ -17,9 +17,23 @@
     <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
     <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
+    <!-- Pnotify.css -->
+    <link href="vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+    <link href="vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+    <link href="vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="css/complement.css" rel="stylesheet">
+
+    <!-- Js -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/pnotify/dist/pnotify.js"></script>
+    <script src="vendors/pnotify/dist/pnotify.buttons.js"></script>
+    <script src="vendors/pnotify/dist/pnotify.nonblock.js"></script>
+
+	  <script src="/js/user.js"></script>
+    <script src="/js/utils.js"></script>
   </head>
 
   <body class="login">
@@ -30,16 +44,16 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <form onSubmit="objUser.login(); return false;">
               <h1>Login Form</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input id="user" type="text" class="form-control" placeholder="Username"/>
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input id="pass" type="password" class="form-control" placeholder="Password"/>
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Log in</a>
+                <button class="btn btn-default submit" Type="submmit">Log in</button>
                 <a href="#signup" class="to_register">Lost your password?</a>
               </div>
 
@@ -57,6 +71,8 @@
               </div>
             </form>
           </section>
+          <div class="loading_login_form loading"> </div>
+
         </div>
 
         <div id="register" class="animate form registration_form">

@@ -56,3 +56,30 @@ CREATE TABLE users_sessions
       REFERENCES users (id) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE NO ACTION
 );
+
+CREATE OR REPLACE FUNCTION public.login(
+    IN _user character varying,
+    IN _pass character varying)
+  RETURNS TABLE(id bigint) AS
+$BODY$
+DECLARE 
+	_id RECORD;
+BEGIN
+	
+	SELECT INTO _id u.id
+		FROM users u
+		WHERE u.user = _user
+			AND u.pass = _pass;
+		
+	IF r.id IS NOT NULL THEN
+		INSERT INTO logs (id_user, action, date_action) VALUES (r.id, 'entrou no sistema', CURRENT_TIMESTAMP);
+		RETURN QUERY SELECT r.id;
+	ELSE
+		RETURN QUERY SELECT false;
+	END IF;
+	
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100
+  ROWS 1000;
