@@ -2,4 +2,6 @@
 vendors/
 build/
 # Para arquivos seguintes
-*.class
+PostgreSQL.php
+conf.php
+request.php
