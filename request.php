@@ -5,10 +5,10 @@ require_once "conf.php";
 function getController($type){
 
     $directories = array();
-	$directories[] = '/var/www/library/controllers/';
+	$directories[] = '/var/www/lsgc.ericksontavares.com.br/public_html/library/controllers/';
 	
 	if(isset($_GET['dir']))
-		$directories[] = '/var/www/library/controllers/'.$_GET['dir'].'/';
+		$directories[] = '/var/www/lsgc.ericksontavares.com.br/public_html/library/controllers/'.$_GET['dir'].'/';
 	
 	
 	foreach($directories as $dir){
