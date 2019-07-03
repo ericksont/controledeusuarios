@@ -8,14 +8,14 @@ if (session_status() !== PHP_SESSION_ACTIVE)
 
 date_default_timezone_set('America/Fortaleza');
 
-define("BEANS", "/var/www/lsgc.ericksontavares.com.br/public_html/library/beans/");
-define("MODELS", "/var/www/lsgc.ericksontavares.com.br/public_html/library/models/");
-define("DBS", "/var/www/lsgc.ericksontavares.com.br/public_html/library/dbs/");
+define("BEANS", "/var/www/library/beans/");
+define("MODELS", "/var/www/library/models/");
+define("DBS", "/var/www/library/dbs/");
 
 function autoLoader($className){
 
 	$directories = array(
-			"/var/www/lsgc.ericksontavares.com.br/public_html/library/controllers/"
+			"/var/www/library/controllers/"
 	);
 	 
 	foreach($directories as $directory){

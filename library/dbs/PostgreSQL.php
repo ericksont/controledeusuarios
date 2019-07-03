@@ -5,7 +5,7 @@ class PostgreSQL {
 	
 	function connect () {
 		try {
-			$this->conn = new PDO('pgsql:host=localhost; port=5432; dbname=ericksontavares; user=postgres; password=postgres');
+			$this->conn = new PDO('pgsql:host=localhost; port=5432; dbname=usercontrl; user=user; password=******');
 			$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} catch (PDOException $e){
 			return $e;

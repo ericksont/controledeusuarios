@@ -1,7 +1,3 @@
 # Para todos os arquivos e sub-pastas localizados nas pastas seguintes
 vendors/
 build/
-# Para arquivos seguintes
-PostgreSQL.php
-conf.php
-request.php
