@@ -2,9 +2,9 @@
 	require_once "conf.php";
 
 	if(isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
-		print "Carrega Sistema";
+		require_once 'main.php';
 	} else {
-		require_once 'login.php';
+		require_once "login.php";
 	}
 
 ?>
