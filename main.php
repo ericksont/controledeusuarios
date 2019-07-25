@@ -18,6 +18,14 @@
 </head>
 
 <body class="nav-md">
+	<?php
+
+		$firstName = "";
+		if(isset($_SESSION["user"]["name"])) {
+			$firstName = explode(" ", $_SESSION["user"]["name"]);
+			$firstName = $firstName[0];
+		}
+	?>
 	<div class="container body">
 		<div class="main_container">
 
@@ -59,7 +67,7 @@
 						<a data-toggle="tooltip" data-placement="top" title="Lock">
 						<span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
 						</a>
-						<a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+						<a data-toggle="tooltip" data-placement="top" title="Sair" href="javascript:void(0);" onClick="objUser.logout();">
 						<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
 						</a>
 					</div>
@@ -102,6 +110,10 @@
 		</div>
 	</div>
 	
+	<!-- Footer Scripts -->
+	<?php require_once "includes/footer_scripts.php"; ?>
+	<!-- /Footer Scripts -->
+
 </body>
 
 </html>

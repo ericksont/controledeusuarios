@@ -39,6 +39,11 @@ class UserController {
 		
 		return $return;
 	}
+
+	public function logout(){
+		session_destroy();
+		return 'success';
+	}
 		
 }
 

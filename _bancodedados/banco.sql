@@ -66,16 +66,18 @@ DECLARE
 	_id RECORD;
 BEGIN
 	
-	SELECT INTO _id u.id
+	SELECT INTO _id u.id, p.name, p.image
 		FROM users u
+		INNER JOIN profiles p ON p.id_user = u.id
 		WHERE u.user = _user
-			AND u.pass = _pass;
+			AND u.pass = _pass
+			AND p.status = 1;
 		
-	IF r.id IS NOT NULL THEN
-		INSERT INTO logs (id_user, action, date_action) VALUES (r.id, 'entrou no sistema', CURRENT_TIMESTAMP);
-		RETURN QUERY SELECT r.id;
+	IF _id.id IS NOT NULL THEN
+		INSERT INTO logs (id_user, action, date_action) VALUES (_id.id, 'entrou no sistema', CURRENT_TIMESTAMP);
+		RETURN QUERY SELECT _id.id;
 	ELSE
-		RETURN QUERY SELECT false;
+		RETURN QUERY SELECT _id.id;
 	END IF;
 	
 END;

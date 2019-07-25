@@ -28,6 +28,39 @@ var User = function() {
 		}
 		
 	};
+
+	this.logout = function(){
+
+		$.confirm({
+            title: 'Sair',
+            content: 'Deseja realmente sair do sistema?',
+            icon: 'fa fa-question-circle',
+            animation: 'scale',
+            closeAnimation: 'scale',
+            opacity: 0.5,
+            buttons: {
+                'confirm': {
+                    text: 'Sim',
+                    btnClass: 'btn-blue',
+                    action: function () {
+                        $.post('/request.php?class=UserAjaxController&method=logout', {}, function(data){
+                            if(data == 'success'){
+                                window.location = "/";
+                            } else  {
+                                new PNotify({
+                                    title: 'Aviso!',
+                                    text: 'Falha ao desconectar!'
+                                });
+                            }
+                        });
+                    }
+                },
+                cancel: function () {
+                    text: 'Não' 
+                }, 
+            }
+        });
+	}
 	
 }
 

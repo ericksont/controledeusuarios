@@ -35,6 +35,16 @@
 <!-- bootstrap-daterangepicker -->
 <script src="/vendors/moment/min/moment.min.js"></script>
 <script src="/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- Confirm -->
+<script src="/vendors/jquery-confirm/dist/jquery-confirm.min.js"></script>
 
 <!-- Custom Theme Scripts -->
 <script src="/build/js/custom.min.js"></script>
+
+<!-- COMPLEMENT -->
+<script src="/js/utils.js"></script>
+<script src="/js/user.js"></script>
+
+<script> 
+    
+</script>
