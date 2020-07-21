@@ -17,6 +17,30 @@ var Utils = function() {
 		});
 		
 	};
+
+	this.search = function(session){
+		
+		var s = $('#txt-search').val();
+		$(location).attr('href', ROOT+'/'+session+'/s/'+s);
+		
+	};
+	
+	this.emailValidate = function(email){
+		
+		var r = "";
+		var emailFilter=/^.+@.+\..{2,}$/;
+		var illegalChars= /[\(\)\<\>\,\;\:\\\/\"\[\]]/
+		
+		// condition
+		if(!(emailFilter.test(email))||email.match(illegalChars)){
+			r = 'error';
+		}else{
+			r = 'ok';
+		}
+		
+		return r;
+		
+	};
 		
 }
 

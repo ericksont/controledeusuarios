@@ -10,3 +10,15 @@
     filter: alpha(opacity=75);
     z-index: 20140628;
 }
+
+.alert-warning {
+    color: #7a5d2b;
+}
+
+.ui-pnotify .glyphicon, .ui-pnotify h4{
+	font-size: 24px;
+}
+
+.ui-pnotify-text {
+	font-weight: bold;
+}
